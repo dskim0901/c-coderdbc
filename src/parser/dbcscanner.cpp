@@ -342,7 +342,7 @@ void DbcScanner::FindVersion(const std::string& instr)
 {
   // try to find version string which looks like: VERSION "x.x"
   static constexpr char* versionAttr = (char*)"VERSION";
-  static constexpr size_t VER_MIN_LENGTH = strlen(versionAttr);
+  static constexpr size_t VER_MIN_LENGTH = sizeof(versionAttr);
 
   uint32_t h = 0, l = 0;
   char marker[VER_MIN_LENGTH + 1u];
